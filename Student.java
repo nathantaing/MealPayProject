@@ -41,4 +41,18 @@ public class Student {
     public String toString(){
         return "Student: " + name + ", ID: " + idNo + ", Balance: " + balance + ", Transaction: " + charges.toString();
     }
+
+    public ArrayList<Transaction> getTransactionByDate(int month, int day){
+        ArrayList<Transaction> inADay = new ArrayList<Transaction>();
+        for (int i = 0; i < charges.size(); i++){
+            if ((charges.get(i).getMonth() == month) && (charges.get(i).getDay() == day)){
+                inADay.add(charges.get(i));
+            }
+        }
+        if (inADay.size() == 0){
+            return null;
+        } else {
+            return inADay;
+        }
+    }
 }
