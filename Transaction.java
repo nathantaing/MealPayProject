@@ -1,7 +1,5 @@
 public class Transaction{
-
-
-
+    
     //fields
     private int month;
     private int day;
