@@ -12,4 +12,18 @@ public class Transaction{
         day = myDay;
         charge = myCharge;
     }
+
+
+    //methods
+    public int getMonth(){
+        return month;
+    }
+
+    public int getDay(){
+        return day;
+    }
+
+    public double getCharge(){
+        return charge;
+    }
 }

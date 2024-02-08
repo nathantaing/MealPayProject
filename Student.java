@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class Student {
@@ -15,7 +16,29 @@ public class Student {
 
     //constructors
 
-    public Student(String myName, int myIdNo, double myBalance){
-        
+    public Student(String myName){
+		idNo = idGen;
+		idGen++;
+        name = myName;
+        balance = 0;
+    }
+
+    //methods
+
+    public void addFunds(int month, int day, int idNo, double amount){
+        Transaction inherit = new Transaction(month, day, idNo);
+        balance += amount;
+        charges.add(inherit);
+    }
+
+
+    public void chargeMeal(int month, int day, int idNo){
+        Transaction yoink = new Transaction(month, day, idNo);
+        balance-=7.0;
+        charges.add(yoink);
+    }
+
+    public String toString(){
+        return "Student: " + name + ", ID: " + idNo + ", Balance: " + balance + ", Transaction: " + charges.toString();
     }
 }
