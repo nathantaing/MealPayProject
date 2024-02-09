@@ -49,4 +49,12 @@ public class Roster {
         return Mark;
     }
 
+    public void addStudent(Student s){
+        students.add(s);
+    }
+
+public String toString(){
+    return "Students: " + students;
+}
+
 }

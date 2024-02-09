@@ -5,7 +5,7 @@ public class MealPayRunner {
        
         System.out.println("Welcome to the MealPay program!");
 
-        ArrayList<Student> school = new ArrayList<Student>();
+       Roster school = new Roster();
 
         System.out.println("Adding students to the program...");
         
@@ -14,12 +14,16 @@ public class MealPayRunner {
         Student kellyShelly = new Student("Kelly Shelly");
         Student bobbyBobbs2 = new Student("Bobby Bobbs");
 
-        school.add(bobbyBobbs1);
-        school.add(joeSchmo);
-        school.add(kellyShelly);
-        school.add(bobbyBobbs2);
+        school.addStudent(bobbyBobbs1);
+        school.addStudent(joeSchmo);
+        school.addStudent(kellyShelly);
+        school.addStudent(bobbyBobbs2);
 
-        school.toString();
+        System.out.println();
+
+        System.out.println("Displaying students...");
+        System.out.println(school.toString());
+        System.out.println();
 
         System.out.println("Adding some funds and making some purchases...");
         bobbyBobbs1.chargeMeal(2, 4, 1);
@@ -37,10 +41,20 @@ public class MealPayRunner {
         bobbyBobbs2.addFunds(2, 9, 4, 5);
         bobbyBobbs2.addFunds(2, 9, 4, 5);
 
-        school.toString();
+        System.out.println(school.toString());
+        System.out.println();
 
+System.out.println("Displaying just those with negative balances...");
+        System.out.println(school.isNegative().toString());;
+        System.out.println();
 
-System.out.println(school.getTransactions(2,4));
+        System.out.println("Looking for student with ID number of 2:");
+        System.out.println(school.hasIdNo(2).toString());;
+        System.out.println();
+
+        System.out.println("Displaying all transaction on 2/4...");
+        System.out.println(school.getTransactions(2, 4).toString());;
+
 
     }
 }

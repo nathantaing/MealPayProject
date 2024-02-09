@@ -8,7 +8,7 @@ public class Student {
 
     private String name;
     private int idNo;
-    private static int idGen;
+    private static int idGen = 1;
     private double balance;
     ArrayList<Transaction> charges = new ArrayList<Transaction>();
 

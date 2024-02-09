@@ -26,4 +26,8 @@ public class Transaction{
     public double getCharge(){
         return charge;
     }
+
+    public String toString(){
+        return "("  + "/" + day + ", " + charge + ") ";
+    }
 }
