@@ -54,4 +54,12 @@ public class Student {
             return inADay;
         }
     }
+
+    public double getBalance(){
+        return balance;
+    }
+
+    public int getIdNo(){
+        return idNo;
+    }
 }
