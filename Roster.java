@@ -18,10 +18,16 @@ public class Roster {
 
     //Methods
 
-    public ArrayList<Transaction> getTransactions(int month, int day){
-        charges.getTransactionsByDate(month, day);
+    public ArrayList<ArrayList<Transaction>> getTransactions(int month, int day){
+        ArrayList<ArrayList<Transaction>> result = new ArrayList<ArrayList<Transaction>>();
+        for (int i = 0; i < students.size(); i++){
+           if(students.get(i).getTransactionByDate(month, day) != null){
+            result.add(students.get(i).getTransactionByDate(month, day));
+           } 
+            
     }
-
+        return result;
+    }
 
     public ArrayList<Student> isNegative(){
         ArrayList<Student> negative = new ArrayList<Student>();
@@ -34,11 +40,13 @@ public class Roster {
     }
 
     public Student hasIdNo(int idNumber){
+       Student Mark = new Student("Mark");
         for(int i = 0; i < students.size(); i++){
             if (students.get(i).getIdNo() == idNumber){
-                return students.get(i);
+                Mark = students.get(i);
             }
         }
+        return Mark;
     }
 
 }

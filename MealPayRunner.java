@@ -40,5 +40,7 @@ public class MealPayRunner {
         school.toString();
 
 
+System.out.println(school.getTransactions(2,4));
+
     }
 }
