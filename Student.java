@@ -62,4 +62,8 @@ public class Student {
     public int getIdNo(){
         return idNo;
     }
+
+    public ArrayList<Transaction> getCharges(){
+        return charges;
+    }
 }
