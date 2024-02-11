@@ -25,14 +25,14 @@ public class Student {
     //methods
 
     public void addFunds(int month, int day, int idNo, double amount){
-        Transaction inherit = new Transaction(month, day, idNo);
+        Transaction inherit = new Transaction(month, day, amount);
         balance += amount;
         charges.add(inherit);
     }
 
 
-    public void chargeMeal(int month, int day, int idNo){
-        Transaction yoink = new Transaction(month, day, idNo);
+    public void chargeMeal(int month, int day, double cost){
+        Transaction yoink = new Transaction(month, day, -7);
         balance-=7.0;
         charges.add(yoink);
     }

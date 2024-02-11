@@ -28,6 +28,6 @@ public class Transaction{
     }
 
     public String toString(){
-        return "("  + "/" + day + ", " + charge + ") ";
+        return "(" + month + "/" + day + ", " + charge + ") ";
     }
 }
