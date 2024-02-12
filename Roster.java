@@ -7,14 +7,11 @@ public class Roster {
 
     ArrayList<Student> students = new ArrayList<Student>();
 
-
-
     //Constructors
 
     public Roster(){
 
     }
-
 
     //Methods
 

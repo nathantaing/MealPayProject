@@ -13,7 +13,6 @@ public class Transaction{
         charge = myCharge;
     }
 
-
     //methods
     public int getMonth(){
         return month;
