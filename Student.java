@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class Student {
     
-
-
     //fields
 
     private String name;
