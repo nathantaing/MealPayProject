@@ -18,12 +18,15 @@ public class Roster {
 
     //Methods
 
-    public ArrayList<ArrayList<Transaction>> getTransactions(int month, int day){
-        ArrayList<ArrayList<Transaction>> result = new ArrayList<ArrayList<Transaction>>();
+    public ArrayList<String> getTransactions(int month, int day){
+        ArrayList<String> result = new ArrayList<String>();
         for (int i = 0; i < students.size(); i++){
-           if(students.get(i).getTransactionByDate(month, day) != null){
-            result.add(students.get(i).getTransactionByDate(month, day));
+            ArrayList<Transaction> studentOnDate = students.get(i).getTransactionByDate(month, day);
+           if(studentOnDate != null){
+                for(int j = 0; j < studentOnDate.size(); j++){
+                    result.add(studentOnDate.get(j) + "by " + students.get(i).getName() + " ID: " + students.get(i).getIdNo());
            } 
+        }
             
     }
         return result;

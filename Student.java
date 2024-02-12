@@ -66,4 +66,8 @@ public class Student {
     public ArrayList<Transaction> getCharges(){
         return charges;
     }
+
+    public String getName(){
+        return name;
+    }
 }

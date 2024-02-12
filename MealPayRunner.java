@@ -27,7 +27,7 @@ public class MealPayRunner {
 
         System.out.println("Adding some funds and making some purchases...");
         bobbyBobbs1.chargeMeal(2, 4, 1);
-        bobbyBobbs1.chargeMeal(2, 4, 1);
+        bobbyBobbs1.chargeMeal(2, 6, 1);
         joeSchmo.addFunds(2, 4, 2, 40);
         joeSchmo.chargeMeal(2, 5, 2);
         kellyShelly.chargeMeal(2, 4, 3);
